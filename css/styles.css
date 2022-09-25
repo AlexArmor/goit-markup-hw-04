@@ -123,6 +123,18 @@ body {
 }
 
 .hero {
+  max-width: 1600px;
+  min-height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 200px;
+  padding-bottom: 200px;
+
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url('../images/hero-background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   background-color: var(--footer-background-color);
   text-align: center;
 }
@@ -198,6 +210,48 @@ body {
   width: 270px;
 }
 
+.feature-list .item::before {
+  display: block;
+  content: '';
+  height: 120px;
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: var(--projects-button-color);
+  border-radius: 4px;
+  margin-bottom: 30px;
+}
+
+.icon-antenna::before {
+  background-image: url(../images/antenna.svg);
+}
+
+.icon-clock::before {
+  background-image: url(../images/clock.svg);
+}
+
+.icon-diagram::before {
+  background-image: url(../images/diagram.svg);
+}
+
+.icon-astronaut::before {
+  background-image: url(../images/astronaut.svg);
+}
+
+/* .feature-list .icon {
+  width: 270px;
+  height: 120px;
+  background-color: var(--projects-button-color);
+}
+
+.feature-list .icon::before {
+  display: inline-block;
+  content: '';
+  width: 70px;
+  height: 70px;
+  outline: 1px solid red;
+} */
+
 .feature-list .item:not(:last-child) {
   margin-right: 30px;
 }
@@ -237,6 +291,7 @@ body {
   background-color: var(--primary-bg-color);
   padding-top: 30px;
   padding-bottom: 30px;
+  border-radius: 0px 0px 4px 4px;
 }
 
 .team-list .title {
@@ -245,6 +300,9 @@ body {
 
 .team-list .item {
   min-width: 270px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
 }
 
 .team-list .item:not(:last-child) {
@@ -328,6 +386,8 @@ body {
 .projects-list .item {
   flex-basis: calc((100% - 60px) / 3);
   border: 1px solid var(--border-projects-color);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .projects {
